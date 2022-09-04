@@ -65,4 +65,28 @@ k = float(input('Digite um valor em Kelvin: '))
 
 c = k - 273.15
 
-print(f'A temperatura em Celsius é{c}')
+print(f'A temperatura em Celsius é {c}')
+
+"""
+9 Leia uma temperatura em graus Celsius e apresente-a em Kelvin.
+A Fórmula de conversão é: K = C + 273.15, sendo C a temperatura em Celsius e K a
+temperatura em Kelvin.
+"""
+
+c = float(input('Digite o valor em Celsius: '))
+
+k = c + 273.15
+
+print(f'O valor em Kelvin é {k}')
+
+"""
+10 Leia uma velocidade em km/h (quilômetro por hora) e conveerte-a em m/s 
+(metros por segundo). A fórmula de conversão é: M = K/3.6, sendo K a velocidade em
+km/h e M em m/s.
+"""
+
+k = float(input('Digite o valor em km/h: '))
+
+m = k/3.6
+
+print(f'A velocidade {k} Km/h convertida em m/s é {m}')
