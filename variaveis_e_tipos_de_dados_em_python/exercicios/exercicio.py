@@ -54,3 +54,15 @@ f = float(input('Digite a temperatura em Farenheint: '))
 c = 5.0 * (f - 32.0)/ 9.0
 
 print(f'A temperatura em Celsius é {c}')
+
+"""
+8 Leia uma temperatura em greus Kelvin e apresente-a convertida em greus Celsius.
+A Fórmula de conversão é: C = K - 273.15, sendo C a temperatura em Celsius e K a 
+temperatura em Kelvin
+"""
+
+k = float(input('Digite um valor em Kelvin: '))
+
+c = k - 273.15
+
+print(f'A temperatura em Celsius é{c}')
