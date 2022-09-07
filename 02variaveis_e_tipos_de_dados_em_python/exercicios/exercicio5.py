@@ -93,3 +93,38 @@ minutos = seg_rest // 60
 seg_final = seg_rest % 60
 
 print(f'o tatol de segundos {entrada} dá  {horas}(horas):{minutos}(minuots):{seg_final}(segundos)')
+
+"""
+49 Faça um programa que leia o horario (hora, minuto e segundo) de inicio e a duração em 
+segundos, de uma experiência biológica. O programa deve resultar com o novo horario
+(hora, minuto e segundo) do termino da mesma.
+"""
+h = int(input('Digite a hora: '))
+m = int(input('Digite os minutos: '))
+s = int(input('Digite os segundos: '))
+seg_hora = h * 3600
+seg_minut = m * 60
+seg_total = seg_hora + seg_minut + s
+
+segundos = int(input('Digite a quantidade de tempo em segundo que se passou: '))
+
+seg_calc = seg_total + segundos
+
+horas = seg_calc // 3600
+seg_rest = seg_calc % 3600
+minutos = seg_rest // 60
+seg_final = seg_rest % 60
+
+print(f'Se parram {horas}:{minutos}:{seg_final}')
+"""
+50 Implemente um programa que calcule o ano do nascimento de uma pessoa a partir de 
+sua idade e do ano atual.
+"""
+idade = int(input('Digite a sua idade: '))
+ano = int(input('Digite o anoa atual(quatro digitos): '))
+
+nascimento = idade - ano
+
+print(f'Você nasceu no ano de : {nascimento}')
+
+
