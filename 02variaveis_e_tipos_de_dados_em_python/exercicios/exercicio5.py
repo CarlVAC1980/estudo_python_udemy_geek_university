@@ -55,3 +55,41 @@ altura = float(input('Digite a altura a ser alcançada: '))
 degraus = int(altura / degrau)
 
 print(f'Os degraus necessarios para se chegar a altura {altura} é: {degraus} degraus')
+
+"""
+45 Faça um programa para converter uma letra maiúscula em letra minúscula. Use a tabela 
+ASCII para resolver o problema.
+"""
+for i in range(65, 91):
+    c = chr(ord(chr(i)) + 32)
+    print(f'{chr(i)}, {c}')
+
+"""
+46 Faça um programa que leia um número inteiro positivo de três digitos ( de 100 a 999).
+Gere outro numero formado pelos digitos invertidos do número lido. Exemplo:
+ - número lido = 123
+ - número gerado = 321
+"""
+lido = input('Digite um número de três digitos (100 a 999): ')
+
+print(lido[::-1])
+
+"""
+47 Leia um digito inteiro de 4 dígitos ( de 1000 a 9999) e imprima 1 dígito por linha.
+"""
+digito = input('Digite um número de quatro digitos (1000 a 9999): ')
+
+for i in range(0, 4):
+    print(digito[i])
+
+"""
+48 Leia um valor inteiro em segundos, e imprima-o em horas, minutos e segundos
+"""
+entrada = int(input('Digite um valor a ser convertido: '))
+
+horas  = entrada // 3600
+seg_rest = entrada % 3600
+minutos = seg_rest // 60
+seg_final = seg_rest % 60
+
+print(f'o tatol de segundos {entrada} dá  {horas}(horas):{minutos}(minuots):{seg_final}(segundos)')
