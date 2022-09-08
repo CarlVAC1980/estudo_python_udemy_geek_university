@@ -137,6 +137,7 @@ y = float(input('Digite o valor de y: '))
 dist = (x ** 2 + y ** 2) ** (1/2)
 
 print(f'O valor da distancia do ponto (0, 0) é de {dist}')
+
 """
 52 Três amigos jogaram na loteria. Caso eles ganhem, o prêmio deve ser repartido
 proporcionalmente ao valor que cada deu para a realização da aposta. Faça um programa
@@ -148,8 +149,13 @@ b = float(input('Digite o valor do amigo 2: '))
 c = float(input('Digite o valor do amigo 3: '))
 
 valor_apost = a + b + c
+porcta = 100 * (a / valor_apost)
+porctb = 100 * (b / valor_apost)
+porctc = 100 * (c / valor_apost)
 
-#Preciso corrigir esse aqui
+print(f'Amigo 1 receberá {porcta}% do premio, '
+      f'\nAmigo 2 receberá {porctb}% do premio e '
+      f'\nAmigo 3 receberá {porctc}% do premio')
 
 """
 53 Faça um programa para ler as dimensões de um terreno (comprimento c e a largura l)
