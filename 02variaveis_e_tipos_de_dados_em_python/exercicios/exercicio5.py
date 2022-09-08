@@ -123,8 +123,42 @@ sua idade e do ano atual.
 idade = int(input('Digite a sua idade: '))
 ano = int(input('Digite o anoa atual(quatro digitos): '))
 
-nascimento = idade - ano
+nascimento = - (idade - ano)
 
 print(f'Você nasceu no ano de : {nascimento}')
 
+"""
+51 Escreva um programa que leia as coordenadas x e y de pontos no R² e calcule a
+distância da origem(0,0)
+"""
+x = float(input('Digite o valor de x: '))
+y = float(input('Digite o valor de y: '))
 
+dist = (x ** 2 + y ** 2) ** (1/2)
+
+print(f'O valor da distancia do ponto (0, 0) é de {dist}')
+"""
+52 Três amigos jogaram na loteria. Caso eles ganhem, o prêmio deve ser repartido
+proporcionalmente ao valor que cada deu para a realização da aposta. Faça um programa
+que leia quanto cada apostador investiu, o valor do prêmio, e imprima quanto cada um
+ganharia do prêmio com base no valor investido.
+"""
+a = float(input('Digite o valor do amigo 1: '))
+b = float(input('Digite o valor do amigo 2: '))
+c = float(input('Digite o valor do amigo 3: '))
+
+valor_apost = a + b + c
+
+#Preciso corrigir esse aqui
+
+"""
+53 Faça um programa para ler as dimensões de um terreno (comprimento c e a largura l)
+bem como o preço do metro de tela p. Imprima o custo para cercar este mesmo terreno
+com tela.
+"""
+c = float(input('Digite o valor do comprimento: '))
+l = float(input('Digite o valor da largura: '))
+
+p = c * l
+
+print(f'A quantidade de metro em tela é de: {p} metros')
