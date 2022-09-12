@@ -145,4 +145,6 @@ else:
     a = ((bmr + bmn) * alt) / 2
     print(f'A area do trapezeo é {a}')
 
-
+"""
+18 
+"""
