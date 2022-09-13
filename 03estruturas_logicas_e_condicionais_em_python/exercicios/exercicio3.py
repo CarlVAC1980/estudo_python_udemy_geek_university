@@ -49,3 +49,19 @@ if idade >= 60 and tempo >= 25:
     print('Pode se aposentar.')
 else:
     print('Não pode se aposentar')
+
+"""
+23 Determine se um determinado ano lido é bisexto. Sendo que um ano é bisexto se 
+for divisível por 400 ou se for divisível por 4 e não divisível por 100. Por exemplo
+1988, 1992, 1996
+"""
+ano = int(input('Digite um ano completo, com os todos os seus digitos: '))
+
+if (ano % 400 == 0 or ano % 4 == 0) and ano % 100 != 0:
+    print('Ano Bisexto')
+else:
+    print('Ano não Bisexto')
+
+"""
+24 
+"""
