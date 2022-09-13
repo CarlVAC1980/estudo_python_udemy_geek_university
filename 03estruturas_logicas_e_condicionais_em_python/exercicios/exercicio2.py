@@ -146,5 +146,59 @@ else:
     print(f'A area do trapezeo é {a}')
 
 """
-18 
+18 Faça um programa que mostre ao usuário um menu com 4 opções de operações 
+matemáticas (as básicas por exemplo). O usuário escolhe uma das opções e o seu 
+programa então pede dois valores numéricos e realiza a operação, mostrando o 
+resultado e saindo.
 """
+op = int(input('Digite um valor para escolher a operação 1=soma(+); 2=menos(-); 3=multiplicação(*); 4=divisão(/): '))
+
+x = float(input('Escolha o primeiro valor: '))
+y = float(input('Escolha o segundo valor: '))
+
+match op:
+    case 1:
+        print(f'O resultado da soma dos dois valores é: {x + y}')
+    case 2:
+        print(f'O resultado da subtração dos dois valores é: {x - y}')
+    case 3:
+        print(f'O resultado da multiplicação dos dois valores é: {x * y}')
+    case 4:
+        print(f'O resultado da divisão dos dois valores é: {x / y}')
+    case _:
+        print(f'operação inválida!')
+
+"""
+19 Faça um programa para verificar se um determinado número inteiro é divisivél por 3 ou por
+5, mas não simultaneamente pelos dois.
+"""
+x = int(input('Digite um valor inteiro: '))
+
+if x % 3 == 0 and x % 5 == 0:
+    print('Valor indevido')
+elif x % 5 == 0:
+    print('É divisivel por 5.')
+elif x % 3 == 0:
+    print('É divisivel por 3.')
+
+"""
+20 Dados três valores, A, B, C, verificar se eles podem ser valores dos lados de um triângulo
+e, se forem, se é um triângulo escaleno, equilátero ou isósceles, considerando os 
+seguitnes conceitos:
+- O comprimento de cada lado de um triângulo é menor do que a soma dos outros dois lados.
+- Chama-se equilátero o trinângulo que tem três lados iguais
+- Denomina-se isósceles o triângulo que tem o comprimento de dois lados iguais.
+- Recebe o nome de escaleno o triângulo que tem os três lados diferente.
+"""
+a = float(input('Digite o valor do lado A: '))
+b = float(input('Digite o valor do lado B: '))
+c = float(input('Digite o valor do lado C: '))
+
+if (a + b < c) or (a + c < b) or (b + c < a):
+    print('Não é um triângulo')
+elif (a == b) and (a == c):
+    print('Triângulo equilátero.')
+elif (a == b) or (a == c) or (b == c):
+    print('Triângulo isósceles.')
+else:
+    print('Triângulo escaleno.')
