@@ -62,6 +62,57 @@ if (ano % 400 == 0 or ano % 4 == 0) and ano % 100 != 0:
 else:
     print('Ano não Bisexto')
 
+"""24 Uma empresa vende o mesmo produto para quatro estados diferentes. Cada estado 
+possui uma taxa diferente de imposto sobre o produto(MG 7%; SP 12%; RJ 15%; MS 8%). 
+Faça um programa em que o usuário entre com o valor e o estado destino do 
+produto e o programa retorne o preçlo final do produto acrescido do imposto do estado 
+em que será vencido. Se o estado digitado não for válido, mostrar uma mensagem de erro.
 """
-24 
+
+produto = float(input('Digite o valor do produto: '))
+estado = input('Digite o estado para onde o produto vai (MG, SP, RJ, MS): ')
+
+match estado:
+    case 'MG':
+        print(f'O valor do produto mais 7% de imposto é {produto + (produto * 0.07)}')
+    case 'SP':
+        print(f'O valor do produto mais 12% de imposto é {produto + (produto * 0.12)}')
+    case 'RJ':
+        print(f'O valor do produto mais 12% de imposto é {produto + (produto * 0.15)}')
+    case 'MS':
+        print(f'O valor do produto mais 12% de imposto é {produto + (produto * 0.08)}')
+    case _:
+        print('Estado digitado inválido')
+
 """
+25 Calcule as raízes da equação de 2º grau. Lembrando que: x = (-b +- rais de delta) / 2a 
+onde delta = B² - 4ac. E (a*x)² + (b *x) + c = 0 respresenta uma equação de segundo gra.
+A variável a ten  que ser diferente de zero. Caso seja igual imprima a mensagem 
+"Não é equação de segundo grau"
+ - Se delta for menor que  zero, não existe raiz real. Imprima a mensagem "Não existe raiz"
+ - Se delta for igual a zero, existe uma raiz real. Imrpima a raiz e a mensagem "Raiz unica"
+ - Se delta for maior ou igual, imprima as duas raizes reais. 
+"""
+import math
+
+print('Equação de segundo grau da forma: ax² + bx + c')
+
+a = float(input('Coeficiente a: '))
+if (a == 0):
+    print('Não é equação de segundo grau')
+else:
+    b = float(input('Coeficiente b: '))
+    c = float(input('Coeficiente c: '))
+    delta = (b**2) - (4 * a * c)
+
+    if delta < 0:
+        print('Não existe raiz')
+    elif delta == 0:
+        raiz = - b / (2 * a)
+        print(f'Raiz unica. A raiz é {raiz}')
+    else:
+        raiz1 = (- b + math.sqrt(delta)) / (2 * a)
+        raiz2 = (- b - math.sqrt(delta)) / (2 * a)
+        print(f'As raizes são {raiz1} e {raiz2}')
+
+
