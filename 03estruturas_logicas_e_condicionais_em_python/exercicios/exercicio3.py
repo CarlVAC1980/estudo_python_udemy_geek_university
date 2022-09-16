@@ -272,5 +272,17 @@ x = int(input('Valor de x: '))
 y = int(input('Valor de y: '))
 z = int(input('Valor de z: '))
 
-if x > y:
+if (x >= y) and (y >= z):
+    print(f'{z}, {y}, {x}')
+elif (x >= z) and (z >= y):
+    print(f'{y}, {z} {x}')
+elif (y >= x) and (x >= z):
+    print(f'{z}, {x}, {y}')
+elif (y >= z) and (z >= x):
+    print(f'{x}, {z}, {y}')
+elif (z >= x) and (x >= y):
+    print(f'{y}, {x}, {z}')
+elif (z >= y) and (y >= x):
     print(f'{x}, {y}, {z}')
+else:
+    print('Algo aconteceu, vamos revisar?')
