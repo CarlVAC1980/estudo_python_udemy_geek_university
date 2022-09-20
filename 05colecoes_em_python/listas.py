@@ -11,5 +11,6 @@ Linguagens C/Java: Arrays
 
 Já em Python:
 
-- Dinâmico: Não possui tamanho fixo: Ou seja, podemos criar uma lista e simplesmente ir adicionando elementos;
+- Dinâmico: Não possuem tamanho fixo: Ou seja, podemos criar uma lista e simplesmente ir adicionando elementos;
+- Qualquer tipo de dado: Não possuem tipo de dado fdixo: Ou seja, podemos colocar qualquer tipo de dado;
 """
