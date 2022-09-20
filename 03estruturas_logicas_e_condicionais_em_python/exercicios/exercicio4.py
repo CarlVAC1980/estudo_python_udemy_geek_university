@@ -67,5 +67,37 @@ else:
     print('Código inválido!')
 
 """
-33 
+33 Um produto vai sofrer aumento de acordo com a tabela abaixo. Leia o preço antigo,
+calcule e escreva o preço novo e escreva uma mensagem em função do novo preço ( de
+acordo com a segunda tabela).
+|  Preço Antigo    |   Percentual   |   
+| até R$ 50.00     |        5%      |
+| entre R$ 50 e 100|        10%     |
+| acima de R$ 100  |        15%     | 
+
+|    Preço Novo       |     Mensagem  |
+| até R$  80          |     Barato    |
+|entre 80 e 120(incl) |     Normal    |
+|entre 120 e 200(incl)|     Caro      |
+|acima de 200         |   Muito caro  |
 """
+preco = float(input('Digite o preço antigo: '))
+preco_novo = 0
+if preco < 50:
+    preco_novo = preco + (preco * 0.05)
+    print(f'O novo preço é R$ {preco_novo}')
+elif 50 <= preco <= 100:
+    preco_novo = preco + (preco * 0.10)
+    print(f'O novo preço é R$ {preco_novo}')
+elif preco > 100:
+    preco_novo = preco + (preco * 0.15)
+    print(f'O novo preço é R$ {preco_novo}')
+
+if preco_novo < 80:
+    print('Barato!')
+elif 80 <= preco_novo <= 120:
+    print('Normal')
+elif 120 < preco_novo <= 200:
+    print('Caro')
+elif preco_novo > 200:
+    print('Muito Caro')
