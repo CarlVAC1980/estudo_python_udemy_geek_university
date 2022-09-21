@@ -143,3 +143,84 @@ elif 0.0 >= nota <= 3.9:
         print(f'Nota: {nota} - Faltas: {faltas} - Conteito E')
 else:
     print('Nota inválida')
+
+"""
+35 Leia uma data e determine se ela é válida. Ou seja, verifique se o mês está entre 1 e 12, 
+e se o dia existe naquele mês. Note que Fevereiro tem 29 em ano bisextos, e 28 dias em anos não bisextos.
+"""
+
+d = int(input('Digite o dia: '))
+m = int(input('Digite o mês: '))
+a = int(input('Digite o ano: '))
+
+if a != 0:
+    if m == 1:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 2:
+        if (a % 400 == 0) or ((a % 4 == 0) and not (a % 100 == 0)):
+            if (d >= 1) and (d <= 29):
+                print('Data válida, ano bisexto!')
+            else:
+                print('Data inválida!')
+        else:
+            if (d >= 1) and (d <= 28):
+                print('Data válida!')
+            else:
+                print('Data inválida!')
+    elif m == 3:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 4:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 5:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 6:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 7:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 8:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 9:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 10:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 11:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 12:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    else:
+        print('Mês inexistente!')
+else:
+    print('Aconteceu algo de errado')
