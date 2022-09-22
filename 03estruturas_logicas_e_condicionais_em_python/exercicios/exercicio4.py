@@ -224,3 +224,57 @@ if a != 0:
         print('Mês inexistente!')
 else:
     print('Aconteceu algo de errado')
+
+
+"""
+36) Escreva um programa que, dado o valor da venda, imprima a comissão
+que deverá ser paga ao vendedor. Para calcular a comissão, considere a tabela abaixo:
+
+    | Venda mensal                                            | Comissão
+    | Maior ou igual a R$100.000,00                           | R$700,00 + 16% das vendas
+    | Menor que R$100.000,00 e maior ou igual a R$80.000,00   | R$650,00 + 14% das vendas
+    | Menor que R$80.000,00 e maior ou igual a R$60.000,00    | R$600,00 + 14% das vendas
+    | Menor que R$60.000,00 e maior ou igual a R$40.000,00    | R$550,00 + 14% das vendas
+    | Menor que R$40.000,00 e maior ou igual a R&20.000,00    | R$500,00 + 14% das vendas
+    | Menor que R$20.000,00                                   | R$400,00 + 14% das vendas
+"""
+
+venda = float(input('Digite o valor da venda: '))
+
+if venda >= 100000:
+    comissao = 700 + (venda * 0.16)
+    print(f'Comissão é de : R$ {comissao:.2f}')
+elif 80000 <= venda < 100000:
+    comissao = 650 + (venda * 0.14)
+    print(f'Comissão é de : R$ {comissao:.2f}')
+elif 60000 <= venda < 80000:
+    comissao = 600 + (venda * 0.14)
+    print(f'Comissão é de : R$ {comissao:.2f}')
+elif 40000 <= venda < 60000:
+    comissao = 550 + (venda * 0.14)
+    print(f'Comissão é de : R$ {comissao:.2f}')
+elif 20000 <= venda < 40000:
+    comissao = 500 + (venda * 0.14)
+    print(f'Comissão é de : R$ {comissao:.2f}')
+elif venda < 20000:
+    comissao = 400 + (venda * 0.14)
+    print(f'Comissão é de : R$ {comissao:.2f}')
+else:
+    print('Valor inválido')
+
+"""
+37) As tarifas de certo parque de estacionamento são as seguintes:
+    - 1ª e 2ª hora - R$1,00 cada
+    - 3ª e 4ª hora - R$1,40 cada
+    - 5ª hora e seguintes - R$2,00 cada
+O número de horas a pagar é sempre inteiro e arredondado por execesso. Deste modo,
+quem estacionar durante 61 minutos pagará por duas horas, que é o mesmo que pagaria
+se tivesse permanecido 120 minutos. Os momentos de chegada ao parque e partida deste
+sao apresentados na forma de pares de inteiros, representando horas e minutos.
+Por exemplo, o par 12,50 representará 'dez para a uma da parte'. Pretende-se
+criar um programa que, lidos pelo teclado os momentos de chegada e de partida, escreva
+na tela o preço cobrado pelo estacionamento. Admite-se que a chegada e a partida
+se dão com intervalo não superior a 24 horas. Portanto, se uma dada hora de chegada
+for supeiror à da partida, isso não é uma situação de erro, antes siginificará que
+a partida ocorreu no dia seguinte ao chegada.
+"""
