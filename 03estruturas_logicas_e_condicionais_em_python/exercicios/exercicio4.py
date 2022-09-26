@@ -441,3 +441,30 @@ direito a nenhum aumento.
     | Acima de 2000,00  | Sem reajuste  | Mais de 10 anos  |  500,00    |
 
 """
+salario_atual = float(input('Digite o valor do salário atual: '))
+tempo_servico = int(input('Digite o tempo de serviço em anos: '))
+reajuste = 0
+if salario_atual <= 500:
+    reajuste = salario_atual + (salario_atual * 0.25)
+elif 500 < salario_atual <= 1000:
+    reajuste = salario_atual + (salario_atual * 0.20)
+elif 1000 < salario_atual <= 1500:
+    reajuste = salario_atual + (salario_atual * 0.15)
+elif 1500 < salario_atual <= 2000:
+    reajuste = salario_atual + (salario_atual * 0.10)
+else:
+    print('Sem reajuste!')
+
+bonus = 0
+if tempo_servico < 1:
+    print('Sem bonus!')
+elif 1 <= tempo_servico <= 3:
+    bonus = 100
+elif 4 <= tempo_servico <= 6:
+    bonus = 200
+elif 7 <= tempo_servico <= 10:
+    bonus = 300
+else:
+    bonus = 500
+
+print(f'Você recebe atualmente {salario_atual}, tem {tempo_servico} de tempo de serviço e ganhará um reajuste no valor de {reajuste} mais um bônus de {bonus} por tempo de serviço, dando um total de {reajuste + bonus}')
