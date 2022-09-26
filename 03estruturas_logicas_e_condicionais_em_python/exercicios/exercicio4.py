@@ -278,3 +278,166 @@ se dão com intervalo não superior a 24 horas. Portanto, se uma dada hora de ch
 for supeiror à da partida, isso não é uma situação de erro, antes siginificará que
 a partida ocorreu no dia seguinte ao chegada.
 """
+h_chegada = int(input('Digite a hora da chegada: '))
+m_chegada = int(input('Digite o minuto de chegada: '))
+
+h_saida = int(input('Digite a hora de saida: '))
+m_saida = int(input('Digite o minuto de saida: '))
+
+total_horas = 0
+
+# Validando as horas
+if 0<= h_chegada < 24 and 0 <= h_saida < 24:
+    if 0 <= m_chegada < 60  and 0 <= m_saida < 60:
+        # Arredondando horas, por minutos a mais
+        if h_saida == h_chegada and m_saida > m_chegada:
+            total_horas += 1
+
+        # Arredondando dia, 23:01 ou mais
+        elif h_saida == h_chegada and m_saida < m_chegada:
+            total_horas = 24
+
+        elif h_saida > h_chegada:
+            total_horas = h_saida - h_chegada
+
+            if m_chegada >= m_saida:
+                pass
+            else:
+                total_horas += 1
+
+        else:
+            total_horas = 24 - (h_chegada - h_saida)
+
+            if m_chegada >= m_saida:
+                pass
+            else:
+                total_horas += 1
+    else:
+        print('Minutos fora do intervalo 00 à 59.')
+
+else:
+    print('Hota fora do intervalo de 00 à 23')
+
+if total_horas > 0:
+    print(f'Tempo de permanencia: {total_horas}hs')
+
+    if 1 <= total_horas <= 2:
+        print(f'Total a pagar R$ {total_horas * 1.00}')
+    elif 3 <= total_horas <= 4:
+        print(f'Total a pagar R$ {total_horas * 1.40}')
+    elif total_horas > 5:
+        print(f'Total a pagar R$ {total_horas * 2.00}')
+    else:
+        print('Erro')
+
+
+"""
+38) Leia uma data de nascimento de uma pessoa fornecida através de três números
+inteiros: Dia, Mês e Ano. Teste a validade desta data para saber se esta é uma
+data válida. Teste se o dia fornecido é um dia válido: dia > 0, dia <= 28 para o mês
+(29 se o ano for bissexto), dia <= 30 em abril, junho, setembro e novembro,
+dia <= 31 nos outros meses. Teste a validade do mês: mês > 0 e mês <13. Teste a
+validade do ano: ano <= ano atual (use uma constante definida com o valor igual a 2008).
+Imprimir: "data válida" ou "data inválida" no final da execução.
+"""
+d = int(input('Digite o dia: '))
+m = int(input('Digite o mês: '))
+a = int(input('Digite o ano: '))
+
+
+anot_atual = 2008
+
+if a <= anot_atual:
+    if m == 1:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 2:
+        if (a % 400 == 0) or ((a % 4 == 0) and not (a % 100 == 0)):
+            if (d >= 1) and (d <= 29):
+                print('Data válida, ano bisexto!')
+            else:
+                print('Data inválida!')
+        else:
+            if (d >= 1) and (d <= 28):
+                print('Data válida!')
+            else:
+                print('Data inválida!')
+    elif m == 3:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 4:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 5:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 6:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 7:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 8:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 9:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 10:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 11:
+        if (d >= 1) and (d <= 30):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    elif m == 12:
+        if (d >= 1) and (d <= 31):
+            print('Data válida!')
+        else:
+            print('Data inválida!')
+    else:
+        print('Data inválida!')
+else:
+    print('Data inválida!')
+
+
+
+"""
+39) Uma empresa decide dar um aumento aos seus funcionários de acordo com uma
+tabela que consideraa o salário atual e o tempo de serviço de cada funcionário.
+Os funcionários com menor salário terão um aumento proporcionalmente maior do que
+os funciopnários com um salário maior, e conforme o tempo de serviço na empresa, cada
+funcionário irá receber um bônus adicional de salário. Faça um programa que leia:
+    - O valor do salário atual do funcionário;
+    - O tempo de serviço desse funcionário na empresa (número de anos de trabalho na
+    empresa).
+Use as tabelas abaixo para calcular o salário reajustado deste funcionário e imprima
+o valor do salário final reajustado, ou uma mensagem caso o funcionário não tenha
+direito a nenhum aumento.
+    |   Salário Atual   |   Reajuste    | Tempo de Serviço |  Bônus     |
+    | Até 500,00        |     25%       | Abaixo de 1 ano  | Sem bônus  |
+    | Até 1000,00       |     20%       | De 1 a 3 anos    |  100,00    |
+    | Até 1500,00       |     15%       | De 4 a 6 anos    |  200,00    |
+    | Até 2000,00       |     10%       | De 7 a 10 anos   |  300,00    |
+    | Acima de 2000,00  | Sem reajuste  | Mais de 10 anos  |  500,00    |
+
+"""
