@@ -468,3 +468,60 @@ else:
     bonus = 500
 
 print(f'Você recebe atualmente {salario_atual}, tem {tempo_servico} de tempo de serviço e ganhará um reajuste no valor de {reajuste} mais um bônus de {bonus} por tempo de serviço, dando um total de {reajuste + bonus}')
+
+
+"""
+40) O custo ao consumidor de um carro novo é a soma do custo de fábrica, da
+comissão do distribuidor, e dos impostos. A comissão e os impostos são calculados
+sobre o custo de fábrica, de acordo com a tabela abaixo. Leia o custo de fábrica e
+escreva o custo ao consumidor
+
+    |      CUSTO DE FÁBRICA          | % DO DISTRIBUIDOR | % DOS IMPOSTOS |
+    | até R$12.000,00                |         5         |    isento      |
+    | entre R$12.000,00 e 25.000,00  |        10         |      15        |
+    | acima de R$25.000,00           |        15         |      20        |
+
+"""
+custo_fabrica = float(input('Digite o valor de fabrica do carro: '))
+
+if custo_fabrica < 12000:
+    custo_consumidor = custo_fabrica + (custo_fabrica * 0.05)
+    print(f'O custo consumidor é R${custo_consumidor}')
+elif (custo_fabrica >= 12000) and (custo_fabrica <= 25000):
+    custo_consumidor = custo_fabrica + ((custo_fabrica * 0.10) + (custo_fabrica * 0.15))
+    print(f'O custo consumidor é R${custo_consumidor}')
+else:
+    custo_consumidor = custo_fabrica + ((custo_fabrica * 0.15) + (custo_fabrica * 0.20))
+    print(f'O custo consumidor é R${custo_consumidor}')
+
+"""
+41) Faça um algoritmo que calcule o IMC de uma pessoa e mostre sua
+classificação de acordo com a tabela abaixo:
+
+    |     IMC      | Classificação
+    | < 18,5       | Abaixo do Peso
+    | 18,6 - 24,9  | Saudável
+    | 25,0 - 29,9  | Peso em excesso
+    | 30,0 - 34,9  | Obesidade Grau I
+    | 35,0 - 39,9  | Obesidade Grau II(severa)
+    | >= 40        | Obesidade Grau III(mórbida)
+    
+"""
+
+peso = float(input('Digite o seu peso: '))
+altura = float(input('Digite sua altura: '))
+
+imc = peso / (altura ** 2)
+
+if imc <= 18.5:
+    print('Abaixo do Peso')
+elif 18.5 < imc <= 24.9:
+    print('Saudável')
+elif 25.0 < imc <= 29.9:
+    print('Peso em Excesso')
+elif 30.0 < imc <= 34.9:
+    print('Obesidade Grau I')
+elif 35.0 < imc <= 39.9:
+    print('Obesidade Grau II')
+else:
+    print('Obesidade Grau III')
