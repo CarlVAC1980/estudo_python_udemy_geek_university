@@ -60,3 +60,113 @@ while num < 100000:
 
 print("Fim exerrcicio 4")
 
+"""
+5) Faça um programa que peça ao usuário para digitar
+10 valores e some-os.
+"""
+
+soma = 0
+for i in range(10):
+    num = int(input(f"Digite o {i+1}° valor: "))
+    soma += num
+
+print()
+print(soma)
+
+print("Fim exercicio 5")
+
+"""
+6) Faça um programa que leia 10 inteiros e imprima sua média.
+"""
+
+media = 0
+for i in range(1, 11):
+    num = int(input(f"Digite o {i}° valor: "))
+    media += num
+    if i >= 10:
+        media = media/i
+
+print()
+print(f"Média: {media}")
+
+print("Fim exercicio 6")
+
+"""
+7) Faça um programa que leia 10 inteiros positivos, ignorando não positivos,
+e imprima sua média
+"""
+media = 0
+soma = 0
+count = 10
+
+for i in range(1, 11):
+    num = int(input(f"Digite o {i}º valor: "))
+    if num < 0:
+        count -= 1
+    else:
+        soma += num
+
+    if i >= 10:
+        media = soma / count
+print(f"A média é: {media}")
+
+print("Fim exercicio 7")
+
+"""
+8) Escreva um programa que leia 10 números e escreva o menor
+valor lido e o maior valor lido.
+"""
+
+menor = 0
+maior = 0
+
+for i in range(1, 11):
+    num = float(input(f"Digite o {i}° valor: "))
+    if menor == 0 and maior ==0:
+        menor = num
+        maior = num
+    elif menor > num:
+        menor = num
+    elif maior < num:
+        maior = num
+
+print(f"O menor é {menor} e o maior é {maior}.")
+
+print('Fim exercicio 8')
+
+"""
+9) Faça um programa que leia um número inteiro N e depois imprima
+os N primeiros números naturais ímpares
+"""
+n = int(input("digite um número: "))
+impar = 0
+cont = 0
+
+for i in range(1, n*n):
+    if i % 2 ==1:
+        print(i)
+        cont += 1
+    if cont >= n:
+        break
+
+print("Fim exercicio 9")
+
+"""
+10) Faça um programa que calcule e mostre a soma dos 50
+primeiros números pares.
+"""
+n = 50
+par = 0
+cont = 0
+
+for i in range(1, 1000):
+    if i % 2 == 0:
+        print(i)
+        par += i
+        cont += 1
+    if cont >= 50:
+        break
+print(f"A soma dos números é {par}")
+
+print("Fim exercicico 10")
+
